@@ -2,14 +2,48 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>TypeScript HTML App2</title>
-    <link rel="stylesheet" href="app.css" type="text/css" />
-    <script src="app.js"></script>
+    <meta charset="utf-8">
+    <title>Occam's razor & TypeScript • TodoMVC</title>
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <h1>TypeScript HTML App</h1>
-
-    <div id="content"></div>
+<section id="todoapp">
+    <header id="header">
+        <h1>todos</h1>
+        <input id="new-todo" placeholder="What needs to be done?" autofocus>
+    </header>
+    <section id="main" style="display: none">
+        <input id="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul id="todo-list"></ul>
+        <ul style="display: none">
+            <li id="TodoTemplate">
+                <div class="view">
+                    <input class="toggle" type="checkbox" />
+                    <label class="title"></label>
+                    <button class="destroy"></button>
+                </div>
+                <input class="edit" />
+            </li>
+        </ul>
+    </section>
+    <footer id="footer" style="display: none">
+        <span id="todo-count">
+            <strong id="LeftTodoCount"></strong> <span id="PluralizeItem"></span> left
+        </span>
+        <ul id="filters">
+            <li><a href="#">All</a></li>
+            <li><a href="#active">Active</a></li>
+            <li><a href="#completed">Completed</a></li>
+        </ul>
+        <button id="clear-completed" type="button">Clear completed (<span id="CompletedCount"></span>)</button>
+    </footer>
+</section>
+<footer id="info">
+    <p>Double-click to edit a todo</p>
+</footer>
+<script src="jquery.js"></script>
+<script src="Util.js"></script>
+<script src="TsApp.js"></script>
 </body>
 </html>
